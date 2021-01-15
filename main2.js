@@ -180,7 +180,7 @@ let allBalls;
 for(i = 0; i < difficulty.length; i++){
     difficulty[i].addEventListener('click', function(e){
         if(e.target.innerText === 'Easy'){
-            allBalls = 3;
+            allBalls = squareNum(4);
         }
         if(e.target.innerText === 'Medium'){
             allBalls = squareNum(5);
