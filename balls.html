@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing balls</title>
+
+    <script src="main2.js" defer></script>
+  </head>
+
+  <body>
+    <style>
+        html, body {
+        margin: 0;
+        }
+
+        html {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        height: 100%;
+        }
+
+        body {
+        overflow: hidden;
+        height: inherit;
+        }
+
+        h1 {
+        font-size: 2rem;
+        letter-spacing: -1px;
+        position: absolute;
+        margin: 0;
+        top: -4px;
+        right: 5px;
+
+        color: transparent;
+        text-shadow: 0 0 4px white;
+        }
+        .score{
+          position: absolute;
+          top: 20px;
+          right: 30px;
+          color: white;
+        }
+        .menu{
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          display: grid;
+          justify-items: center;
+          align-items: center;
+          background: rgba(0, 0, 0, 0.75);
+        }
+        .option{
+          display: grid;
+          grid-gap: 15px;
+          text-align: center;
+          font-size: 24px;
+          color: white;
+          width: 11.63rem;
+        }
+        .message{
+          font-size: 15px;
+        }
+        button{
+          background: none;
+          border: 1px white solid;
+          padding: 10px;
+          color: white;
+        }
+        .difficulty{
+          display: block !important;
+        }
+        .instruction{
+          display: none;
+          padding: 10px;
+          font-size: medium;
+          border: 1px solid white;
+        }
+    </style>
+
+    <h1>bouncing balls</h1>
+    <p class="score"></p>
+    <canvas></canvas>
+
+    <div class="menu" id="menu">
+      <div class="option">
+        Menu
+        <p class="message">Select difficulty first then click on 'Start Game' to begin</p>
+        <button type="button" id="start-game">Start Game</button>
+        <button type="button" id="difficulty">Select Difficulty</button>
+        <div class="" id="levels" style="display: none;">
+          <button type="button" id="easy">Easy</button>
+          <button type="button" id="Medium">Medium</button>
+          <button type="button" id="Hard">Hard</button>
+        </div>
+        <button type="button" id="instructionBtn">Instruction</button>
+        <p class="instruction"></p>
+      </div>
+    </div>
+  </body>
+</html>
